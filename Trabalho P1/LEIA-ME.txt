@@ -1,0 +1,7 @@
+A parte 1 do trabalho está dividida por etapas seguindo o roteiro;
+
+A versão 1: Contém os arquivos da linguagem bf trocando os tokens originais pelos solicitados
+
+A versão 2: Adiciona da possibilidade de algumas instruções receberem um numero inteiro ex: inc N
+
+A versão 3: Adiciona a versão traduzida dos programas solicitados para a nova linguagem

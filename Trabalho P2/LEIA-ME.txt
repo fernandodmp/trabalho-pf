@@ -1,0 +1,35 @@
+# Documentação da Linguagem
+
+## Organização de Memória
+
+A linguagem possui uma área memória simulada que corresponde a um total de 65MB e um conjunto de 6 registradores, sendo eles:
+
+- $SP, registrador que aponta para uma posição de memória da pilha
+- $PC, registrador que aponta para a intrução a ser executada em cada iteração
+- $ACC, registrador acumulador utilizado em algumas instruções da linguagem
+- $BR, $CR, $DR registradores de uso geral
+
+## Fluxo dos programas
+
+O fluxo dos programas por padrão seguem uma ordem sequencial de instruções, onde as instruções estão salvas em um vector, e a execução do programa
+é dada por uma iteração sobre este vector onde a cada etapa é executada a instrução apontada por $PC, e ao final de cada instrução o valor de $PC é incrementado.
+O fluxo pode ser alterado ao modificar o valor de $PC.
+
+## Instruções
+
+- read: Lê um byte da entrada padrão e salva em $ACC
+- write: Escreve o byte salvo em $ACC na saída padrão
+- store: Salva o valor de $ACC na posição da pilha apontada por $PC
+- load: Salva o valor contido na posição de memória apontada por $PC em $ACC
+- inc reg: Incrementa em 1 o valor do registrador reg
+- dec reg: Decrementa em 1 o valor do registrador reg
+- move reg op: Salva o valor de op que pode ser um inteiro ou um registrador no registrador reg
+- add reg op: Adiciona o valor de op que pode ser um inteiro ou um registrador ao valor do registrador reg
+- sub reg op: Subtrai o valor de op que pode ser um inteiro ou um registrador do valor do registrador reg
+- jump N: Muda o fluxo do programa redirecionando pra que as execuções continuem sendo feitas a partir da instrução N
+- je N reg1 reg2: Muda o fluxo do programa redirecionando pra que as execuções continuem sendo feitas a partir da instrução N se os registradores reg1 e reg2 tem o mesmo valor
+- jne N reg1 reg2: Muda o fluxo do programa redirecionando pra que as execuções continuem sendo feitas a partir da instrução N se os registradores reg1 e reg2 não tem o mesmo valor
+- jg N reg1 reg2: Muda o fluxo do programa redirecionando pra que as execuções continuem sendo feitas a partir da instrução N se o valor de reg1 é maior que o de reg2
+- jge N reg1 reg2: Muda o fluxo do programa redirecionando pra que as execuções continuem sendo feitas a partir da instrução N se o valor de reg1 é maior ou igual que o de reg2
+- jl N reg1 reg2: Muda o fluxo do programa redirecionando pra que as execuções continuem sendo feitas a partir da instrução N se o valor de reg1 é menor que o de reg2
+- jle N reg1 reg2: Muda o fluxo do programa redirecionando pra que as execuções continuem sendo feitas a partir da instrução N se o valor de reg1 é menor ou igual que o de reg2

@@ -1,0 +1,1 @@
+("7.4" racket ("5f57213706fac97543b05c9344fb39effe7425bc" . "f1b0471684f6ee2a2c2a762a05088a74ab664272") #"C:\\Users\\user\\Desktop\\Faculdade\\Programa\303\247\303\243o Funcional\\Trabalho P1\\parser.rkt" (collects #"br" #"quicklang.rkt") (collects #"brag" #"support.rkt") (collects #"errortrace" #"errortrace-key.rkt") (collects #"racket" #"runtime-config.rkt"))
